@@ -43,16 +43,18 @@ class App extends React.Component {
         <span style={{display:'block'}}>Stock Spider Viewer</span>
         <input type="text" id="ticker_input" />
         <button onClick={(e) =>{this.reloadData()}}>Reload Data</button>
-        <XYPlot
-          width={900}
-          height={500}>
-          <HorizontalGridLines />
-          <LineSeries
-            color="red"
-            data={this.state.currentData}/>
-          <XAxis title="X" />
-          <YAxis />
-        </XYPlot>
+        <div style={{display:'block',margin:'20px',boxShadow:'0px 0px 2px rgba(0,0,0,0.4)'}}>
+          <XYPlot
+            width={900}
+            height={500}>
+            <HorizontalGridLines />
+            <LineSeries
+              color="red"
+              data={this.state.currentData}/>
+            <XAxis title="X" />
+            <YAxis />
+          </XYPlot>
+        </div>
       </div>
     );
   }

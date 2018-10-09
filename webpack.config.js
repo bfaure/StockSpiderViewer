@@ -8,7 +8,8 @@ var config = {
 
   devServer: {
     inline: true,
-    port: 7777
+    port: 7777,
+    disableHostCheck: true,
   },
 
   module: {
